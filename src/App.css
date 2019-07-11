@@ -1,33 +1,112 @@
 .App {
-  text-align: center;
+  background-color: #e8eef1;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+.spacer {
+  height: 8vh;
+}
+.nav {
+  background-color: #e8eef1;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15vh;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+.logo {
+  background-color: #057dcd;
+  height: 64px;
+  width: 64px;
+}
+.tab-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-size: 150%;
+  font-weight: bold;
+  font-style: oblique;
+  color: #1e3d58;
+  width: 40%;
+  height: 70%;
+}
+.footer {
+  background-color: #1e3d58;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #e8eef1;
+  width: 100vw;
+  height: 10vh;
+}
+.footer h3 {
+  margin: 0;
+}
+.block {
+  padding-top: 3%;
+  padding-bottom: 3%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.services {
+  background-color: #e8eef1;
+  color: #1e3d58;
+  height: 30vh;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.call-us p {
+  font-size: 300%;
+}
+.call-us,
+.about {
+  background-color: #057dcd;
+  color: #e8eef1;
+}
+.about {
+  font-size: 1.2rem;
+}
+.text-content {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.text-content h3 {
+  width: 48%;
+}
+.images {
+  display: flex;
+  margin-bottom: 2%;
+}
+.image {
+  width: 20%;
+}
+.tent-1 {
+  content: url(./images/tent-1.jpg);
+}
+.tent-2 {
+  content: url(./images/tent-2.jpg);
+}
+.tent-3 {
+  content: url(./images/tent-3.jpg);
+}
+.tent-4 {
+  content: url(./images/tent-4.jpg);
+}
+.tent-5 {
+  content: url(./images/tent-5.jpg);
 }
