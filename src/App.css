@@ -44,6 +44,23 @@ h3 {
   width: 40%;
   height: 70%;
 }
+.tab:hover {
+  transition: 1s;
+  font-size: 101%;
+  letter-spacing: 0.5px;
+}
+.tab::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #6849e3;
+  z-index: -1;
+  transition: width 0.75s ease;
+}
+.tab:hover::before {
+  width: 2%;
+}
 .footer {
   background-color: #1e3d58;
   display: flex;
