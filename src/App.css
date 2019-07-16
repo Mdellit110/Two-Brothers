@@ -1,6 +1,8 @@
 .App {
+  position: relative;
+  transition: 0.2s ease;
   background-color: #e8eef1;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   overflow: hidden;
   overflow-y: scroll;
@@ -13,14 +15,17 @@ h2,
 h3 {
   margin: 0;
 }
-.spacer {
+.spacer1 {
+  height: 15vh;
+}
+.spacer2 {
   height: 8vh;
 }
 .nav {
   background-color: #e8eef1;
   position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 15vh;
@@ -41,8 +46,11 @@ h3 {
   font-weight: bold;
   font-style: oblique;
   color: #1e3d58;
-  width: 40%;
+  width: 70vw;
   height: 70%;
+}
+.tab {
+  box-sizing: border-box;
 }
 .tab:hover {
   transition: 1s;
@@ -59,16 +67,18 @@ h3 {
   transition: width 0.75s ease;
 }
 .tab:hover::before {
-  width: 2%;
+  width: 1rem;
 }
 .footer {
   background-color: #1e3d58;
+  position: absolute;
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: #e8eef1;
   width: 100vw;
   height: 10vh;
+  bottom: 0;
 }
 .footer h3 {
   margin: 0;
@@ -80,6 +90,47 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.block.blue {
+  background-color: #057dcd;
+  color: #e8eef1;
+  font-size: 3rem;
+  height: 20vh;
+}
+.block.white {
+  background-color: #e8eef1;
+  height: 20vh;
+}
+.review {
+  height: 30px;
+}
+.button {
+  position: relative;
+  border-radius: 5px;
+  background-color: navy;
+  font-size: 2rem;
+  padding: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border: blue 2px dotted;
+  overflow: hidden;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: black;
+  width: 200px;
+  z-index: 2;
+  bottom: -10px;
+}
+.button:hover .circle {
+  bottom: -10px;
+  height: 100%;
 }
 .services {
   background-color: #e8eef1;
@@ -126,4 +177,110 @@ h3 {
 }
 .tent-5 {
   content: url(./images/tent-5.jpg);
+}
+.Quotes-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-container {
+  background-color: #057dcd;
+  padding: 40px;
+}
+label {
+  color: #e8eef1;
+  font-size: 1.5rem;
+  width: 30vw;
+  cursor: pointer;
+  user-select: none;
+}
+input {
+  outline: none;
+}
+.form-input {
+  display: flex;
+}
+.form-input input {
+  background-image: linear-gradient(to bottom, #49a0da, #057dcd);
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #e8eef1;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #0567a8;
+  border-bottom-right-radius: 4px;
+}
+.form-input input:hover {
+  background-image: linear-gradient(to bottom, #59a8dd, #1b88d1);
+}
+.form-input input::placeholder {
+  color: #a9aeb0;
+}
+.form-check {
+  margin-bottom: 20px;
+}
+.services-check {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.services-check label {
+  display: block;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  justify-self: center;
+}
+.services-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+  background-color: #eee;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.services-check label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.services-check input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+.services-check input:checked ~ .checkmark:after {
+  display: block;
+}
+.services-check .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.form-input textarea {
+  background-image: linear-gradient(to bottom, #49a0da, #057dcd);
+  padding: 10px;
+  width: 60vw;
+  height: 20vh;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: none;
 }

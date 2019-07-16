@@ -1,5 +1,5 @@
 import React from "react";
-const Home = () => {
+const Home = props => {
   return (
     <div className="Homepage">
       <div className="block call-us">
@@ -46,6 +46,7 @@ const Home = () => {
           </h3>
         </div>
       </div>
+      <div className="spacer2" />
     </div>
   );
 };
