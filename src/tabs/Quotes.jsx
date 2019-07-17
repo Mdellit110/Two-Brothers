@@ -2,6 +2,8 @@ import React from "react";
 const Quotes = props => {
   return (
     <div className="Quotes-page">
+      <h1>QUOTE</h1>
+      <h3>fill out this form and well get back to you shortly with a quote!</h3>
       <form
         className="contact-form"
         id="contactform"
@@ -10,45 +12,45 @@ const Quotes = props => {
       >
         <div className="form-container">
           <div className="form-input">
-            <label name="first-name">First Name</label>
-            <input type="text" name="first-name" />
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" required />
           </div>
           <div className="form-input">
-            <label name="last-name">Last Name</label>
-            <input type="text" name="last-name" />
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" required />
           </div>
           <div className="form-input">
-            <label name="_replyto">Email Address</label>
-            <input type="email" name="_replyto" />
+            <label for="_replyto">Email Address</label>
+            <input type="email" name="_replyto" required />
           </div>
           <div className="form-input">
-            <label name="phone">Phone Number</label>
-            <input name="phone" />
+            <label for="phone">Phone Number</label>
+            <input name="phone" required />
           </div>
           <div className="form-input">
-            <label name="location">Where?</label>
-            <input name="location" />
+            <label for="location">Where?</label>
+            <input name="location" required />
           </div>
           <div className="form-input">
-            <label name="when">When?</label>
-            <input type="date" name="when" />
+            <label for="when">When?</label>
+            <input type="date" name="when" required />
           </div>
           <div className="form-input">
-            <label name="guests">Guests?</label>
-            <input type="number" name="guests" />
+            <label for="guests">Guests?</label>
+            <input type="number" name="guests" required />
           </div>
 
           <div className="form-check">
             <label>Services</label>
             <div className="services-check">
-              <label name="tent">
-                Tent?
-                <input type="checkbox" name="tent" />
-                <span class="checkmark" />
-              </label>
               <label name="tables">
                 Tables?
                 <input type="checkbox" name="tables" />
+                <span class="checkmark" />
+              </label>
+              <label name="tent">
+                Tent?
+                <input type="checkbox" name="tent" />
                 <span class="checkmark" />
               </label>
               <label name="chairs">
@@ -62,18 +64,37 @@ const Quotes = props => {
                 <span class="checkmark" />
               </label>
               <label name="bar">
-                Bar?
+                Cocktail Bar?
                 <input type="checkbox" name="bar" />
+                <span class="checkmark" />
+              </label>
+              <label name="flooring">
+                Flooring?
+                <input type="checkbox" name="flooring" />
+                <span class="checkmark" />
+              </label>
+              <label name="sidewalls">
+                Sidewalls?
+                <input type="checkbox" name="sidewalls" />
+                <span class="checkmark" />
+              </label>
+              <label name="tablecloth">
+                Tableclothes?
+                <input type="checkbox" name="tablecloth" />
                 <span class="checkmark" />
               </label>
             </div>
           </div>
-          <div className="form-input">
-            <label>More info?</label>
-            <textarea name="extra" />
+          <div className="form-textarea">
+            <label name="extra">
+              More info?
+              <textarea name="extra" />
+            </label>
           </div>
-          <div className="form-input">
-            <input className="contact-input" type="submit" value="Send" />
+          <div className="form-submit">
+            <button className="submit-button" type="submit">
+              Submit Your Quote!
+            </button>
           </div>
         </div>
       </form>

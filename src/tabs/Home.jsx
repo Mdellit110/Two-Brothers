@@ -1,5 +1,6 @@
 import React from "react";
 const Home = props => {
+  const { setOpenTab } = props;
   return (
     <div className="Homepage">
       <div className="block call-us">
@@ -8,13 +9,11 @@ const Home = props => {
         <h1>(516)-724-1804</h1>
       </div>
       <div className="block services">
-        <h1>SERVICES</h1>
+        <h1 onClick={() => setOpenTab("gallery")}>GALLERY</h1>
         <div className="images">
           <div className="image tent-1" />
           <div className="image tent-2" />
           <div className="image tent-3" />
-          <div className="image tent-4" />
-          <div className="image tent-5" />
         </div>
       </div>
       <div className="block about">

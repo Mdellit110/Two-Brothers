@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <NavBar setOpenTab={setOpenTab} />
       <div className="spacer1" />
-      {openTab === "home" ? <Home /> : null}
+      {openTab === "home" ? <Home setOpenTab={setOpenTab} /> : null}
       {openTab === "review" ? <Reviews /> : null}
       {openTab === "gallery" ? <Gallery /> : null}
       {openTab === "inventory" ? <Inventory /> : null}
