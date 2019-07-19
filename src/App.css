@@ -6,6 +6,7 @@
   width: 100%;
   overflow: hidden;
   overflow-y: scroll;
+  font-family: "Open Sans", sans-serif;
 }
 body {
   margin: 0;
@@ -14,6 +15,7 @@ h1,
 h2,
 h3 {
   margin: 0;
+  font-family: "Oswald", sans-serif;
 }
 .spacer1 {
   height: 15vh;
@@ -33,6 +35,7 @@ h3 {
   top: 0;
   left: 0;
   z-index: 2;
+  box-shadow: 0 2px 35px -5px #4d4d4d;
 }
 .logo {
   background-color: #057dcd;
@@ -40,30 +43,35 @@ h3 {
   width: 64px;
 }
 .tab-group {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-content: center;
+  justify-items: center;
   font-size: 150%;
   font-weight: bold;
-  font-style: oblique;
   color: #1e3d58;
+  margin-top: 3%;
   width: 70vw;
   height: 70%;
 }
 .tab {
   box-sizing: border-box;
+  transition-property: transform, text-shadow;
+  transition-timing-function: ease-out;
+  transition-duration: 0.15s;
+  height: 5vh;
+  line-height: 5vh;
 }
 .tab:hover {
-  transition: 1s;
-  font-size: 101%;
-  letter-spacing: 0.5px;
+  transform: scale(1.08) translateY(-2px);
+  text-shadow: 0 2px 2px #96b2c1;
 }
 .tab::before {
   position: absolute;
   content: "";
   width: 0;
   height: 2px;
-  background-color: #6849e3;
+  background-color: #1e3d58;
   z-index: -1;
   transition: width 0.75s ease;
 }
@@ -94,12 +102,6 @@ h3 {
   align-items: center;
   text-align: center;
 }
-.block.title {
-  font-size: 3em;
-}
-.block h3 {
-  margin-top: 10px;
-}
 .block.blue {
   background-color: #057dcd;
   color: #e8eef1;
@@ -108,6 +110,14 @@ h3 {
 .block.white {
   background-color: #e8eef1;
   height: 20vh;
+}
+.title.block {
+  font-size: 3em;
+}
+.block.desc {
+  height: auto;
+  padding-top: 0;
+  margin: 0;
 }
 
 .review {
@@ -156,17 +166,21 @@ h3 {
 }
 .call-us {
   padding-bottom: 60px;
+  padding-top: 0;
 }
 .about {
   font-size: 1.2rem;
 }
 .text-content {
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
 }
 .text-content h3 {
+  text-align: left;
   width: 48%;
+  padding-top: 7%;
+  padding-bottom: 14%;
 }
 .images {
   display: flex;
@@ -178,15 +192,9 @@ h3 {
 .image {
   width: 30%;
 }
-.tent-1 {
-  content: url(./images/tent3.jpg);
-}
-.tent-2 {
+
+.tent {
   content: url(./images/tent1.jpg);
-}
-.tent-3 {
-  content: url(./images/tent2.jpg);
-  transform: rotateZ(90deg);
 }
 
 .Quotes-page {
@@ -259,6 +267,7 @@ input {
   width: 70%;
 }
 .form-check {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 .form-check label {
@@ -352,4 +361,100 @@ input {
   background-color: #7db8e0;
   transform: scale(1.1) translateY(-10px);
   box-shadow: 0 10px 20px 0 #0567a8;
+}
+.Gallery-page {
+  background-color: #057dcd;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20%;
+}
+.Gallery-page h1 {
+  color: #e8eef1;
+  text-align: center;
+  padding-top: 3%;
+}
+.image-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+.gallery {
+  width: 40%;
+  margin-top: 2.5%;
+}
+.float {
+  transition-property: transform, box-shadow;
+  transition-duration: 0.6s;
+}
+.float:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 10px 20px 0 #0567a8;
+}
+.white .float:hover {
+  box-shadow: 0 10px 20px 0 #94989a;
+}
+.Inventory-page {
+  margin-bottom: 7%;
+}
+.inventory-page h1 {
+}
+.inventory.block {
+  height: 40%;
+  display: flex;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.block.services {
+  padding-top: 30px;
+  margin-bottom: -30px;
+}
+.inventory-image {
+  margin: 0;
+  width: 45%;
+}
+.item-desc {
+  width: 45vw;
+  height: 100%;
+}
+.my-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+.my-links a {
+  padding-right: 4px;
+}
+.github {
+  width: 10%;
+  filter: invert(100%);
+  transition-property: filter;
+  transition-duration: 0.2s;
+}
+.linkedin {
+  width: 10%;
+  filter: invert(100%);
+  transition-property: filter;
+  transition-duration: 0.2s;
+}
+.my-links a img {
+  width: 100%;
+  height: 40px;
+}
+.github:hover {
+  filter: invert(70%);
+}
+.linkedin:hover {
+  filter: invert(70%);
+}
+.portfolio {
+  text-decoration: none;
+  color: #e8eef1;
+}
+.portfolio:hover {
+  text-decoration: underline;
 }

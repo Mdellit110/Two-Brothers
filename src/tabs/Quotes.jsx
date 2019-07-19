@@ -2,8 +2,11 @@ import React from "react";
 const Quotes = props => {
   return (
     <div className="Quotes-page">
-      <h1>QUOTE</h1>
-      <h3>fill out this form and well get back to you shortly with a quote!</h3>
+      <div className="title block blue">QUOTE</div>
+      <h3>
+        Fill out this form and we'll get back to you shortly to set up an
+        appointment!
+      </h3>
       <form
         className="contact-form"
         id="contactform"
